@@ -21,7 +21,8 @@ namespace Tarea3._1
             dataGridViewPersonas.Rows.Clear();
             for (int i = 0; i < index; i++)
             {
-                dataGridViewPersonas.Rows.Add(contactos[i].Nombre, contactos[i].ApellidoPaterno, contactos[i].ApellidoMaterno, contactos[i].FechaNacimiento.ToString("dd/MM/yyyy"), contactos[i].Edad, contactos[i].Correo, contactos[i].Telefono);
+                string[] celdas = contactos[i].ToString().Split(' ');
+                dataGridViewPersonas.Rows.Add(celdas[0], celdas[1], celdas[2], celdas[3], celdas[4], celdas[5], celdas[6]);
             }
         }
         /// <summary>

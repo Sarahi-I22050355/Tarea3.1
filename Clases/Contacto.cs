@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows.Forms;
+
 namespace Tarea3._1
 {
     internal class Contacto : Persona
@@ -28,7 +30,7 @@ namespace Tarea3._1
         }
         public override string ToString()
         {
-            return base.ToString()  + correo + telefono;
+            return base.ToString()  +" " + correo  +" " + telefono;
         }
     }
 }

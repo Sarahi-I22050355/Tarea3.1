@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows.Forms;
+
 namespace Tarea3._1
 {
     class Persona
@@ -51,7 +53,8 @@ namespace Tarea3._1
         }
         public override string ToString()
         {
-            return nombre  + apellidoPaterno + apellidoMaterno  + fechaNacimiento.ToString("dd/MM/yyyy");
+            return nombre + " " + apellidoPaterno + " "+ apellidoMaterno +" "+ fechaNacimiento.ToString("dd/MM/yyyy") +" " + Edad;
         }
+        
     }
 }
