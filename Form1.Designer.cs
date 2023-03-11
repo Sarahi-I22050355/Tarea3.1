@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Limpiar = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             // textBoxTelefono
             // 
             this.textBoxTelefono.Location = new System.Drawing.Point(170, 268);
-            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(180, 22);
             this.textBoxTelefono.TabIndex = 8;
@@ -101,7 +101,7 @@
             this.buttonAceptar.TabIndex = 2;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = false;
-            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
+            this.buttonAceptar.Click += new System.EventHandler(this.ButtonAceptar_Click);
             // 
             // label7
             // 
@@ -123,7 +123,7 @@
             this.buttonAgregar.TabIndex = 9;
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.UseVisualStyleBackColor = false;
-            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
+            this.buttonAgregar.Click += new System.EventHandler(this.ButtonAgregar_Click);
             // 
             // label6
             // 
@@ -221,11 +221,11 @@
             // dataGridViewPersonas
             // 
             this.dataGridViewPersonas.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridViewPersonas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewPersonas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewPersonas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridViewPersonas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -238,23 +238,24 @@
             this.Column7,
             this.Column6});
             this.dataGridViewPersonas.Location = new System.Drawing.Point(358, 51);
-            this.dataGridViewPersonas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewPersonas.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewPersonas.Name = "dataGridViewPersonas";
-            this.dataGridViewPersonas.Size = new System.Drawing.Size(712, 425);
+            this.dataGridViewPersonas.Size = new System.Drawing.Size(527, 425);
             this.dataGridViewPersonas.TabIndex = 10;
             // 
             // nudNumPersonas
             // 
             this.nudNumPersonas.Location = new System.Drawing.Point(109, 41);
-            this.nudNumPersonas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudNumPersonas.Margin = new System.Windows.Forms.Padding(4);
             this.nudNumPersonas.Name = "nudNumPersonas";
             this.nudNumPersonas.Size = new System.Drawing.Size(49, 22);
             this.nudNumPersonas.TabIndex = 1;
             // 
             // dtpFechaNacimiento
             // 
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(170, 212);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.MinDate = new System.DateTime(1930, 1, 1, 0, 0, 0, 0);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(180, 22);
@@ -329,7 +330,7 @@
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.dataGridViewPersonas);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Guarda los datos de \"n\" personas en C#.";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonas)).EndInit();

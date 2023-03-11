@@ -16,7 +16,7 @@ namespace Tarea3._1
         public string Telefono
         {
             get { return telefono;}
-            set { telefono = telefono = value.Replace(" ", "").Replace("-", ""); ; } 
+            set { telefono = value.Replace(" ", "").Replace("-", "").Substring(0,10);} 
         }
         public Contacto() : base()
         {
@@ -26,11 +26,11 @@ namespace Tarea3._1
         public Contacto(string nombre, string apellidoPaterno, string apellidoMaterno, DateTime fechaNacimiento, string telefono, string correo) : base(nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento)
         {
             this.Correo = correo;
-            this.Telefono = telefono;  
+            this.Telefono = telefono;
         }
         public override string ToString()
         {
-            return base.ToString()  +" " + correo  +" " + telefono;
+            return base.ToString() + " " + telefono + " " + correo;
         }
     }
 }

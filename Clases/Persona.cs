@@ -12,17 +12,17 @@ namespace Tarea3._1
         public string Nombre
         {
             get { return nombre; }
-            set { nombre = value; }
+            set { nombre = value.ToUpper(); }
         }
         public string ApellidoPaterno
         {
             get { return apellidoPaterno; }
-            set { apellidoPaterno = value; }
+            set { apellidoPaterno = value.ToUpper(); }
         }
         public string ApellidoMaterno
         {
             get { return apellidoMaterno; }
-            set { apellidoMaterno = value; }
+            set { apellidoMaterno = value.ToUpper(); }
         }
 
         public DateTime FechaNacimiento

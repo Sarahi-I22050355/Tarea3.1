@@ -45,10 +45,9 @@ namespace Tarea3._1
                 return false;
             }
         }
-        private void buttonAceptar_Click(object sender, EventArgs e)
+        private void ButtonAceptar_Click(object sender, EventArgs e)
         {
-            int numMaxPersonas;
-            bool esNumero = int.TryParse(nudNumPersonas.Text, out numMaxPersonas);
+            bool esNumero = int.TryParse(nudNumPersonas.Text, out int numMaxPersonas);
             if (!esNumero)
             {
                 MessageBox.Show("Por favor ingrese un número válido de personas a almacenar.");
@@ -73,11 +72,11 @@ namespace Tarea3._1
                 MessageBox.Show("Por favor, ingrese un número de personas válido mayor a cero.");
             }
         }
-        private void buttonAgregar_Click(object sender, EventArgs e)
+        private void ButtonAgregar_Click(object sender, EventArgs e)
         {
-            string nombre = textBoxNombre.Text.Trim().ToUpper();
-            string apellidoPaterno = textBoxApellidoPaterno.Text.Trim().ToUpper();
-            string apellidoMaterno = textBoxApellidoMaterno.Text.Trim().ToUpper();
+            string nombre = textBoxNombre.Text;
+            string apellidoPaterno = textBoxApellidoPaterno.Text;
+            string apellidoMaterno = textBoxApellidoMaterno.Text;
             //Validando campos completos
             if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellidoPaterno) || string.IsNullOrEmpty(apellidoMaterno))
             {
@@ -91,8 +90,9 @@ namespace Tarea3._1
                 MessageBox.Show("Por favor, ingrese un número de teléfono válido.");
                 return;
             }
+            string correo = textBoxCorreoElectronico.Text;
             //Validar correo
-            if (!Valido(textBoxCorreoElectronico.Text))
+            if (!Valido(correo))
             {
                 MessageBox.Show("El correo electrónico ingresado no es válido, por favor inténtalo nuevamente.");
                 return;
@@ -104,8 +104,15 @@ namespace Tarea3._1
                 return;
             }
             DateTime fechaNacimiento = dtpFechaNacimiento.Value;
-            string correo = textBoxCorreoElectronico.Text;
-            Contacto nuevoContacto = new Contacto(nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento, correo, telefono);
+            Contacto nuevoContacto = new Contacto
+            {
+                Nombre = nombre,
+                ApellidoPaterno = apellidoPaterno,
+                ApellidoMaterno = apellidoMaterno,
+                FechaNacimiento = fechaNacimiento,
+                Correo = correo,
+                Telefono = telefono
+            };
             contactos[index] = nuevoContacto;
             index++;
             ActualizarTabla();
